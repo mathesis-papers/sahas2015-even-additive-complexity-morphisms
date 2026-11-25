@@ -1,0 +1,71 @@
+{
+  "id": "sahas2015-even-additive-complexity-morphisms",
+  "revision": 2,
+  "problem_ids": ["sahas2015"],
+  "topic": "Sahasrabudhe's even additive-complexity construction question for finite morphisms of universal words",
+  "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+  "creators": [
+    {"name": "Ma, Haobo", "affiliation": "ChronoAI Pte Ltd, Singapore"},
+    {"name": "Zhang, Wenlin", "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore"}
+  ],
+  "abstract": "For the even-complexity construction question posed by Sahasrabudhe in Sturmian Words and Constant Additive Complexity (2015, Section 5, p. 7), we extend Banero's common-slope criterion (2013, Theorem 21): a bounded-complexity finite-morphic image of a word containing every finite source word has odd additive complexity at every sufficiently large multiple of the codeword-length gcd, by pairing complementary factor sums. Empty codewords are allowed when the output is infinite; consequently an eventually constant positive complexity is odd. Equal sums of equal-length complete images and complementary windows give a reflection with one fixed point. The argument also applies to lattice-valued sums, including abelian complexity. We give the anchored-word consequence of Banero's criterion and show that uniformly recurrent outputs are periodic.",
+  "summary": "A complementary-factor involution gives eventual odd cardinality at gcd-admissible lengths for bounded lattice-valued complexity of universal-input finite-morphic images. Scalar consequences include the negative answer to Sahasrabudhe's even-complexity construction question. Further written consequences concern common slopes, anchored words and periodicity under uniform recurrence.",
+  "license": "cc-by-4.0",
+  "evidence_url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean",
+  "posing_source": {
+    "author": "Julian Sahasrabudhe",
+    "title": "Sturmian Words and Constant Additive Complexity",
+    "journal": "Integers",
+    "volume": "15",
+    "year": 2015,
+    "article": "A30",
+    "locator": "Section 5, first question, printed p. 7",
+    "url": "https://math.colgate.edu/~integers/p30/p30.pdf",
+    "doi": "10.5281/zenodo.10456215"
+  },
+  "coverage": [
+    {
+      "statement": "No constant positive even additive complexity at all positive lengths",
+      "note_locator": "Corollary 2",
+      "support": "Written proof; pinned Lean declaration D5.S1.Words.Complexity.SahasrabudheEvenAdditiveComplexityMorphism.result",
+      "hypotheses": "Finite nonempty source alphabet, every finite source word occurs, finite integer codewords, unbounded cumulative output lengths; empty codewords allowed"
+    },
+    {
+      "statement": "Bounded complexity gives odd cardinality at all sufficiently large multiples of the gcd of codeword lengths",
+      "note_locator": "Theorem 1",
+      "support": "Written proof"
+    },
+    {
+      "statement": "Eventually constant positive additive complexity is odd",
+      "note_locator": "Corollary 2",
+      "support": "Written proof"
+    },
+    {
+      "statement": "A uniformly recurrent infinite output is periodic; a constant-complexity such output is constant",
+      "note_locator": "Corollary 6",
+      "support": "Written proof"
+    },
+    {
+      "statement": "Other uniformly recurrent fixed-complexity constructions outside this universal-input method",
+      "note_locator": "Section 4, coverage table",
+      "support": "Not covered in general"
+    },
+    {
+      "statement": "Bounded complexity is equivalent to common average among nonempty codewords; the output is anchored, giving the universal-input special case of Banero's Problem 32",
+      "note_locator": "Corollary 4",
+      "support": "Written proof extending Banero (2013), Theorem 21 and Lemma 22; the general Problem 32 is not covered",
+      "source_status": "The criterion has a prior proof for non-erasing anchors; this restricted Problem 32 case is not separately posed"
+    },
+    {
+      "statement": "Bounded lattice-valued complexity is odd at all sufficiently large multiples of the codeword-length gcd; eventually constant positive abelian complexity is odd",
+      "note_locator": "Corollary 5",
+      "support": "Written proof in the lattice-complexity setting of Banero (2013), Definition 34",
+      "source_status": "Not posed; proved"
+    }
+  ],
+  "finite_checks": {
+    "program": "verify.py",
+    "expected_output": "checks.json",
+    "scope": "Exact factor-sum enumeration for the finite codebooks and lengths specified in checks.json; the quantified statements have written proofs"
+  }
+}

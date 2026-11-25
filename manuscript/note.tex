@@ -1,0 +1,316 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=27mm]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion},pdfauthor={Haobo Ma; Wenlin Zhang}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\sumword}[1]{\sigma(#1)}
+\title{Parity in Sahasrabudhe's additive-complexity question:\newline extending Banero's morphism criterion}
+\author{Haobo Ma\\\small ChronoAI Pte Ltd, Singapore
+\and Wenlin Zhang\\\small National University of Singapore\\\small ChronoAI Pte Ltd, Singapore}
+\date{14 November 2026}
+\begin{document}
+\maketitle
+\begin{abstract}
+For the even-complexity construction question posed by Sahasrabudhe in
+\emph{Sturmian Words and Constant Additive Complexity} (2015, Section~5,
+p.~7), we extend Banero's common-slope criterion (2013, Theorem~21): a
+bounded-complexity finite-morphic image of a word containing every finite
+source word has odd additive complexity at every sufficiently large
+multiple of the codeword-length gcd, by pairing complementary factor sums.
+Empty codewords are allowed when the output is infinite; consequently an
+eventually constant positive complexity is odd. Equal sums of equal-length
+complete images and complementary windows give a reflection with one
+fixed point. The argument also applies to lattice-valued sums, including
+abelian complexity. We give the anchored-word consequence of Banero's
+criterion and show that uniformly recurrent outputs are periodic.
+\end{abstract}
+
+\section{The construction and its obstruction}
+In Section~5 of~\cite{sahas}, Sahasrabudhe describes a construction attributed
+to Banero: concatenate an enumeration of all finite words over
+$\{0,\ldots,m\}$, then replace $a$ by $(a)(2m-a)$. Its additive complexity
+is constantly $2m+1$. The first question there asks: ``Can a construction
+of this form be generalized to give constructions of words with fixed
+even complexity?'' We answer it negatively when
+``of this form'' means a finite morphism of a word containing every finite
+source word. This restriction matters: Sahasrabudhe's Theorem~2 constructs
+uniformly recurrent words of every constant complexity $K>1$ by a different,
+generalized-Sturmian construction.
+
+Let $A$ be a finite nonempty alphabet. A word $w\in A^{\N}$ is
+\emph{universal} if every word in $A^*$ occurs as a contiguous factor of $w$.
+Let $\varphi:A^*\to\Z^*$ preserve concatenation, and put
+$\ell_a=|\varphi(a)|$. We allow $\ell_a=0$, and require that the cumulative
+lengths $b_0=0$, $b_{i+1}=b_i+\ell_{w_i}$ tend to infinity.
+Thus the concatenation $y=\varphi(w)$ is an infinite word over a finite
+integer alphabet. For a finite integer word $U$ write
+$\sumword{U}=\sum_{j=0}^{|U|-1}U_j$. For $n\geq1$, set
+\[
+ S_n(y)=\left\{\sum_{j=0}^{n-1}y_{i+j}:i\geq0\right\},
+ \qquad \rho_y^+(n)=|S_n(y)|.
+\]
+These sets are finite and nonempty. At least one codeword has positive
+length; define
+\[
+ d=\gcd\{\ell_a:a\in A\}>0,
+ \qquad R=\max_{a\in A}\ell_a.
+\]
+
+\begin{theorem}\label{thm:parity}
+Suppose $w$ is universal and $y=\varphi(w)$ is infinite.
+If $\rho_y^+(n)$ is bounded independently of $n$, then there is $N$ such
+that $\rho_y^+(n)$ is odd whenever $n\geq N$ and $d\mid n$.
+\end{theorem}
+
+\begin{corollary}\label{cor:constant}
+Under these hypotheses, a constant positive additive complexity, or an
+eventually constant positive additive complexity, must be odd.
+In particular, no such output has $\rho_y^+(n)=2k$ for all $n\geq1$ and
+any integer $k\geq1$.
+\end{corollary}
+\begin{proof}
+An eventually constant complexity is bounded, since the finitely many
+earlier values are finite. Apply Theorem~\ref{thm:parity} at a sufficiently
+large multiple of $d$.
+\end{proof}
+
+Banero's anchor theorem~\cite[Theorem~21 and Lemma~22]{banero} characterizes the
+non-erasing morphisms whose images all have bounded additive complexity:
+their codewords have a common average. The first lemma below gives the
+necessary sum rigidity directly from one universal input, including
+erasing morphisms. The further step is the parity conclusion, not the
+common-average criterion. Additive complexity and its relation to
+additive powers were developed in~\cite{ardal}; finite-state calculations
+for automatic words are treated in~\cite{popoli}.
+Their fixed-point hypotheses differ from the universal-input hypothesis
+here. Our conclusion concerns parity of the entire factor-sum set,
+rather than automaticity of its cardinality.
+
+\section{Proof by complementary factors}
+Call $\varphi(u)$, for $u\in A^*$, a \emph{complete image}.
+Every complete image occurs in $y$, by universality. The same holds for
+any finite concatenation of complete images and, in particular, for its
+square.
+
+\begin{lemma}\label{lem:rigidity}
+If $\rho_y^+(n)\leq B$ for all $n\geq1$ and some integer $B\geq1$, complete images of the same
+length have the same sum.
+\end{lemma}
+\begin{proof}
+Let $U,V$ be complete images of length $L$. When $L=0$ both sums are zero.
+Otherwise the complete images $U^jV^{B-j}$, $0\leq j\leq B$, all have
+length $BL$ and sums
+\[
+ j\sumword{U}+(B-j)\sumword{V}.
+\]
+If $\sumword{U}\neq\sumword{V}$ these are $B+1$ distinct members of
+$S_{BL}(y)$, a contradiction. Here $B\geq1$ since the sum sets are nonempty.
+\end{proof}
+
+Let $H$ be the additive semigroup of lengths of complete images, including
+zero. There is an integer $C\geq0$ such that every multiple of $d$ at
+least $C$ belongs to $H$. For completeness, divide the positive
+generators by $d$, so that their gcd is one, and choose a positive
+generator $h$. Their nonnegative combinations modulo $h$ form a subgroup
+of the finite group $\Z/h\Z$: in a finite group a submonoid contains
+the inverse of each of its elements. This subgroup is all of
+$\Z/h\Z$, by the gcd condition. Choose one nonnegative combination
+$t_r$ in each residue class $r$. Every integer at least $\max_r t_r$
+is $t_r+qh$ for the appropriate $r$ and some $q\geq0$, and therefore
+belongs to the semigroup. Multiplying back by $d$ gives $C$.
+
+\begin{proof}[Proof of Theorem~\ref{thm:parity}]
+Take a multiple $n$ of $d$ with $n\geq\max\{1,C+2R\}$.
+Choose a complete image $W$ of length $n$, and put $c=\sumword{W}$.
+We will show
+\begin{equation}\label{eq:reflection}
+ c\in S_n(y),\qquad z\in S_n(y)\Longrightarrow 2c-z\in S_n(y).
+\end{equation}
+The first assertion follows from the occurrence of $W$.
+
+For the second, take an occurrence $y_i\cdots y_{i+n-1}$ with sum $z$.
+Bracket it by codeword boundaries: choose $b_s\leq i$ with
+$i<b_{s+1}$ and the first boundary $b_t\geq i+n$ after this start.
+Unboundedness of the boundaries guarantees these choices even when some
+successive boundaries coincide. With
+$U=\varphi(w_s\cdots w_{t-1})$ and $p=i-b_s$, we have
+\[
+ p+n\leq |U|,\qquad n\leq |U|\leq n+2R.
+\]
+Indeed, the extra lengths before and after the chosen factor are each
+less than $R$, or zero at an endpoint. Both $|U|$ and $n$ are divisible
+by $d$. Hence $2n-|U|$ is a multiple of $d$ and is at least $C$.
+There is a complete image $V$ of that length. Put $T=UV$, so $|T|=2n$.
+By Lemma~\ref{lem:rigidity}, comparison with $WW$ gives
+\[
+ \sumword{T}=2c.
+\]
+The complete image $TT$ occurs in $y$. Starting at offset $p$ in this
+occurrence, its first $n$ symbols reproduce the chosen factor. The next
+$n$ symbols complete a cyclic rotation of $T$. Those two windows
+together have sum $\sumword{T}=2c$, so the second window has sum $2c-z$.
+This proves~\eqref{eq:reflection}.
+
+The map $z\mapsto2c-z$ is an involution on the finite set $S_n(y)$.
+Its unique fixed point is $c$, which belongs to the set. All other
+elements occur in pairs, so $|S_n(y)|$ is odd.
+\end{proof}
+
+The divisibility restriction is necessary. For the single codeword
+$(0,1)$, the output is $(01)^{\infty}$ and $d=2$. Its additive complexity
+is one at every even length and two at every odd length.
+
+\section{Common slopes, anchored words and lattice sums}
+Banero calls a non-erasing morphism an \emph{anchor} if every infinite
+input has an image of bounded additive complexity, and calls any image
+under an anchor an \emph{anchored word}~\cite[Definition~20 and Section~3.3]{banero}.
+
+\begin{corollary}[Common-slope criterion and anchored-word consequence]\label{cor:anchor}
+For a universal input and an infinite output, bounded additive complexity
+is equivalent to all nonempty codewords having the same rational average
+$\lambda$. Every such bounded-complexity output is anchored.
+Thus Banero's Problem~32 holds for this class, already with a splice
+consisting of one anchored word.
+\end{corollary}
+\begin{proof}
+If $P,Q$ are nonempty codewords, compare the complete images
+$P^{|Q|}$ and $Q^{|P|}$ in Lemma~\ref{lem:rigidity} to get
+$|Q|\sumword{P}=|P|\sumword{Q}$. Their averages are equal.
+Conversely, suppose the common average is $\lambda$. Let $E$ be the
+finite set of numbers $\sumword{P[0,r)}-\lambda r$, where $P$ ranges
+over the nonempty codewords, $0\leq r\leq |P|$, and $P[0,r)$ denotes
+the prefix of length $r$.
+At any position, the sum of the preceding output minus $\lambda$
+times its length belongs to $E$, because every completed codeword has
+zero discrepancy. Hence
+$S_n(y)\subseteq\lambda n+(E-E)$ and $\rho_y^+(n)\leq |E-E|$.
+This bound holds for every infinite concatenation of the nonempty
+codewords, so deleting the erased source letters gives an anchor whose
+image is $y$, as in Banero's Theorem~21. A one-word splice is the word
+itself under his Definition~30; this proves the stated restricted case
+of Problem~32, not that conjecture in general.
+\end{proof}
+
+\begin{corollary}[Lattice-valued complexity]\label{cor:lattice}
+Let $t\geq1$, let $\Gamma$ be a finite alphabet and let
+$\mu:\Gamma^*\to\Z^t$ preserve concatenation as vector addition.
+For an infinite word $y$, define
+$\rho_y^\mu(n)=|\{\mu(F): F\text{ is a length-}n\text{ factor of }y\}|$.
+If $y$ is an infinite finite-morphic image of a universal word and
+$\rho_y^\mu$ is bounded, then $\rho_y^\mu(n)$ is odd at all sufficiently
+large multiples of the codeword-length gcd. In particular, an eventually
+constant positive abelian complexity of such an image is odd.
+\end{corollary}
+\begin{proof}
+Use Banero's lattice-complexity setting~\cite[Definition~34]{banero}.
+In Lemma~\ref{lem:rigidity}, two distinct vector sums give $B+1$
+distinct vectors $j\mu(U)+(B-j)\mu(V)$, since $\Z^t$ is torsion-free.
+All length and padding arguments are unchanged. Complementary windows
+therefore pair the vector-sum set by $z\mapsto2c-z$, where $c$ is the
+vector sum of a complete image of length $n$. The equation $2z=2c$
+has exactly one solution, $z=c$, and that vector occurs. The resulting
+cardinality is odd. For abelian complexity, take $\mu$ to be the Parikh
+map, with one coordinate counting each letter of $\Gamma$.
+\end{proof}
+
+\section{Uniform recurrence and the source's other question}
+A word is \emph{uniformly recurrent} if each of its factors occurs with
+bounded gaps, equivalently if each factor occurs in every sufficiently
+long factor.
+
+\begin{corollary}\label{cor:recurrence}
+If $w$ is universal and $y=\varphi(w)$ is infinite and uniformly
+recurrent, then $y$ is periodic. If its additive complexity is also
+constant, then $y$ is constant and that complexity is one.
+\end{corollary}
+\begin{proof}
+Choose a nonempty codeword $P$, of length $q$. Every power $P^j$ occurs
+in $y$. Given any factor $F$ of $y$, uniform recurrence forces $F$ to
+occur inside a sufficiently long $P^j$, so $F$ is a factor of the
+periodic word $P^{\infty}$. Apply this to each factor of length $q+1$:
+its first and last symbols are equal. Thus $y_{i+q}=y_i$ for every
+$i\geq0$. A $q$-periodic word has $\rho_y^+(q)=1$; if its complexity
+is constant, then $\rho_y^+(1)=1$, which makes $y$ constant.
+\end{proof}
+
+\begin{center}\small
+\begin{tabular}{@{}p{0.38\linewidth}p{0.55\linewidth}@{}}
+\toprule
+Source item & Coverage\\
+\midrule
+Section~5, first question, p.~7 & Answered negatively for universal-input
+finite morphisms, including erasing codewords: Corollary~\ref{cor:constant}.\\[3pt]
+Section~5, odd construction, p.~7 & Prior construction of Banero,
+\cite[Theorem~33]{banero}; compatible with the parity obstruction.\\[3pt]
+Section~5, second question, p.~7: other uniformly recurrent words of fixed
+complexity & Not answered in general. Corollary~\ref{cor:recurrence}
+excludes nonconstant uniformly recurrent fixed-complexity examples from
+this universal-input method.\\[3pt]
+Theorem~2 and the shifted generalized-Sturmian construction & Prior proof
+cited: Sahasrabudhe (2015), Sections~3--5, constructs all $K>1$ by another
+method.\\[3pt]
+Banero, Theorem~21 and Lemma~22 & Reproved; prior proof Banero (2013)
+for non-erasing anchors. Corollary~\ref{cor:anchor} includes erasure and
+extracts necessity from one universal input.\\[3pt]
+Banero, Problem~32, p.~16 & Not covered in general. The universal-input
+special case is not separately posed; proved in
+Corollary~\ref{cor:anchor} from the common-slope criterion.\\[3pt]
+Banero, Definition~34 and Section~5, pp.~17--18 & Lattice parity is not
+posed there; proved in Corollary~\ref{cor:lattice}. The lattice
+boundedness and power results there remain prior results.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Verification and accompanying sources}
+In the \href{https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean}{pinned Lean source},
+the declaration \texttt{result} in namespace
+\texttt{D5.S1.Words.Complexity.}\allowbreak
+\texttt{SahasrabudheEvenAdditiveComplexityMorphism}
+proves the impossibility of a positive even complexity constant at every
+positive length. Its hypotheses are a finite nonempty source alphabet,
+universality, and an infinite morphic image defined by unbounded
+cumulative boundaries; empty codewords are included.
+Theorem~\ref{thm:parity}, the eventual-constant extension in
+Corollary~\ref{cor:constant}, and Corollaries~\ref{cor:anchor},
+\ref{cor:lattice} and~\ref{cor:recurrence} have the written proofs above.
+The accompanying \texttt{verify.py} computes exact
+factor-sum sets for finite codebooks, checks the complementary-sum
+symmetry at the stated admissible lengths, and checks Banero's odd
+construction. These finite checks illustrate the statements rather
+than supply premises for their proofs.
+
+\begin{thebibliography}{9}
+\bibitem{sahas} J. Sahasrabudhe,
+\emph{Sturmian Words and Constant Additive Complexity},
+Integers \textbf{15} (2015), A30, 8 pp.
+\href{https://math.colgate.edu/~integers/p30/p30.pdf}{Journal text}.
+\bibitem{banero} G. Banero,
+\emph{On Additive Complexity of Infinite Words},
+Journal of Integer Sequences \textbf{16} (2013), Article~13.1.5,
+especially Theorems~21 and~33.
+\href{https://cs.uwaterloo.ca/journals/JIS/VOL16/Banero/banero3.pdf}{Journal text}.
+Earlier version: \href{https://arxiv.org/abs/1209.4691v1}{arXiv:1209.4691v1} (2012).
+\bibitem{ardal} H. Ardal, T. Brown, V. Jungi\'c and J. Sahasrabudhe,
+\emph{On abelian and additive complexity in infinite words},
+Integers \textbf{12} (2012), A21.
+\href{https://doi.org/10.1515/integers-2012-0005}{doi:10.1515/integers-2012-0005}.
+\bibitem{popoli} P. Popoli, J. Shallit and M. Stipulanti,
+\emph{Additive Word Complexity and Walnut},
+FSTTCS 2024, LIPIcs \textbf{323}, Article~32, pp.~32:1--32:18.
+\href{https://doi.org/10.4230/LIPIcs.FSTTCS.2024.32}{doi:10.4230/LIPIcs.FSTTCS.2024.32}.
+Earlier version: \href{https://arxiv.org/abs/2410.02409v1}{arXiv:2410.02409v1}.
+\end{thebibliography}
+\medskip\noindent\small
+\copyright\ 2026 Haobo Ma and Wenlin Zhang.
+Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{Creative Commons Attribution 4.0 International (CC BY 4.0)}.
+\end{document}

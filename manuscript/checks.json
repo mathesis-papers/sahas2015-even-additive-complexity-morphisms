@@ -1,0 +1,50 @@
+{
+  "arithmetic": "exact integers and rational numbers",
+  "coverage": {
+    "additional_erasing_three_letter_codebooks": 4,
+    "banero_cases": 80,
+    "banero_maximum_factor_length": 20,
+    "banero_parameters": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "center_reflection_and_odd_cardinality_cases": 1911,
+    "codeword_alphabet": [
+      -1,
+      0,
+      1
+    ],
+    "codeword_lengths": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "common_slope_maximum_factor_length": 16,
+    "common_slope_pairs": 315,
+    "divisibility_example": {
+      "codebook": [
+        [
+          0,
+          1
+        ]
+      ],
+      "rho_1": 2,
+      "rho_2": 1
+    },
+    "finite_state_and_direct_enumeration_agreements": 6396,
+    "ordered_codeword_pairs": 1599,
+    "unequal_slope_pairs": 1284,
+    "unequal_slope_repetition_counts": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "method": "finite-state enumeration of all factors of arbitrary concatenations of the selected codewords",
+  "scope": "The finite checks illustrate the written proofs; the quantified statements are proved in note.tex.",
+  "status": "PASS"
+}

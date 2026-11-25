@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, cite it."
+title: "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion"
+authors:
+  - name: "Haobo Ma"
+  - name: "Wenlin Zhang"
+date-released: "2026-11-25"
+version: "2"
+url: "https://mathesis-omega-research.apps.chrono-ai.fun/papers/sahas2015-even-additive-complexity-morphisms?version=2"
+license: "CC-BY-4.0"

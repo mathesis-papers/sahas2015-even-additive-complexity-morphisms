@@ -1,0 +1,66 @@
+{
+  "files": {
+    "pdf": {
+      "bytes": 74792,
+      "matches_public": true,
+      "path": "paper.pdf",
+      "public_sha256": "5f3e4a81340c17cbdf48b31fed4abda74a026f9f9aa08edde5ba4673557fa549",
+      "sha256": "5f3e4a81340c17cbdf48b31fed4abda74a026f9f9aa08edde5ba4673557fa549"
+    },
+    "source": {
+      "bytes": 13128,
+      "matches_public": true,
+      "path": "source.archive",
+      "public_sha256": "3e9a9c0fbe0ab1ba10b8c7347e3a06b8d99c458b3747e036dba78d54ff5d6afe",
+      "sha256": "3e9a9c0fbe0ab1ba10b8c7347e3a06b8d99c458b3747e036dba78d54ff5d6afe"
+    }
+  },
+  "source_identity": "Mathesis public projection",
+  "work": {
+    "abstract_text": "For the even-complexity construction question posed by Sahasrabudhe in Sturmian Words and Constant Additive Complexity (2015, Section 5, p. 7), we extend Banero's common-slope criterion (2013, Theorem 21): a bounded-complexity finite-morphic image of a word containing every finite source word has odd additive complexity at every sufficiently large multiple of the codeword-length gcd, by pairing complementary factor sums. Empty codewords are allowed when the output is infinite; consequently an eventually constant positive complexity is odd. Equal sums of equal-length complete images and complementary windows give a reflection with one fixed point. The argument also applies to lattice-valued sums, including abelian complexity. We give the anchored-word consequence of Banero's criterion and show that uniformly recurrent outputs are periodic.",
+    "authors": [
+      {
+        "affiliation": "ChronoAI Pte Ltd, Singapore",
+        "name": "Haobo Ma"
+      },
+      {
+        "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+        "name": "Wenlin Zhang"
+      }
+    ],
+    "concept_doi": null,
+    "current_version": 2,
+    "doi": null,
+    "lean_source": {
+      "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+      "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+    },
+    "license": "CC-BY-4.0",
+    "msc": [],
+    "pdf": {
+      "bytes": 74792,
+      "sha256": "5f3e4a81340c17cbdf48b31fed4abda74a026f9f9aa08edde5ba4673557fa549",
+      "url": "/api/v1/collected-papers/sahas2015-even-additive-complexity-morphisms/files/pdf?version=2"
+    },
+    "previous_version": null,
+    "publication": "public",
+    "published_on": "2026-11-25T14:47:15.787115797Z",
+    "record": "sahas2015-even-additive-complexity-morphisms",
+    "repository_name": "sahas2015-even-additive-complexity-morphisms",
+    "source": {
+      "bytes": 13128,
+      "sha256": "3e9a9c0fbe0ab1ba10b8c7347e3a06b8d99c458b3747e036dba78d54ff5d6afe",
+      "url": "/api/v1/collected-papers/sahas2015-even-additive-complexity-morphisms/files/source?version=2"
+    },
+    "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+    "versions": [
+      {
+        "previous_version": null,
+        "published_on": "2026-11-25T14:47:15.787115797Z",
+        "revision": "2",
+        "version": 2
+      }
+    ],
+    "work": "sahas2015-even-additive-complexity-morphisms"
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "nodes": [
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s1",
+      "contributor": null,
+      "identity": "collected:sahas2015-even-additive-complexity-morphisms:2:s1",
+      "kind": "paper",
+      "label": "Theorem",
+      "lean_source": {
+        "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+      },
+      "lineage": "collected:sahas2015-even-additive-complexity-morphisms:s1",
+      "macros": {
+        "\\N": "\\mathbb N",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\sumword": "\\sigma(#1)"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sahas2015-even-additive-complexity-morphisms",
+      "scope": "in_scope",
+      "statement": "Suppose $w$ is universal and $y=\\varphi(w)$ is infinite.\nIf $\\rho_y^+(n)$ is bounded independently of $n$, then there is $N$ such\nthat $\\rho_y^+(n)$ is odd whenever $n\\geq N$ and $d\\mid n$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+      "toolchain": null,
+      "version": 2,
+      "work": "sahas2015-even-additive-complexity-morphisms"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s2",
+      "contributor": null,
+      "identity": "collected:sahas2015-even-additive-complexity-morphisms:2:s2",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+      },
+      "lineage": "collected:sahas2015-even-additive-complexity-morphisms:s2",
+      "macros": {
+        "\\N": "\\mathbb N",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\sumword": "\\sigma(#1)"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sahas2015-even-additive-complexity-morphisms",
+      "scope": "in_scope",
+      "statement": "Under these hypotheses, a constant positive additive complexity, or an\neventually constant positive additive complexity, must be odd.\nIn particular, no such output has $\\rho_y^+(n)=2k$ for all $n\\geq1$ and\nany integer $k\\geq1$.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+      "toolchain": null,
+      "version": 2,
+      "work": "sahas2015-even-additive-complexity-morphisms"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s3",
+      "contributor": null,
+      "identity": "collected:sahas2015-even-additive-complexity-morphisms:2:s3",
+      "kind": "paper",
+      "label": "Lemma",
+      "lean_source": {
+        "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+      },
+      "lineage": "collected:sahas2015-even-additive-complexity-morphisms:s3",
+      "macros": {
+        "\\N": "\\mathbb N",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\sumword": "\\sigma(#1)"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sahas2015-even-additive-complexity-morphisms",
+      "scope": "in_scope",
+      "statement": "If $\\rho_y^+(n)\\leq B$ for all $n\\geq1$ and some integer $B\\geq1$, complete images of the same\nlength have the same sum.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+      "toolchain": null,
+      "version": 2,
+      "work": "sahas2015-even-additive-complexity-morphisms"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s4",
+      "contributor": null,
+      "identity": "collected:sahas2015-even-additive-complexity-morphisms:2:s4",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+      },
+      "lineage": "collected:sahas2015-even-additive-complexity-morphisms:s4",
+      "macros": {
+        "\\N": "\\mathbb N",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\sumword": "\\sigma(#1)"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sahas2015-even-additive-complexity-morphisms",
+      "scope": "in_scope",
+      "statement": "For a universal input and an infinite output, bounded additive complexity\nis equivalent to all nonempty codewords having the same rational average\n$\\lambda$. Every such bounded-complexity output is anchored.\nThus Banero's Problem~32 holds for this class, already with a splice\nconsisting of one anchored word.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+      "toolchain": null,
+      "version": 2,
+      "work": "sahas2015-even-additive-complexity-morphisms"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s5",
+      "contributor": null,
+      "identity": "collected:sahas2015-even-additive-complexity-morphisms:2:s5",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+      },
+      "lineage": "collected:sahas2015-even-additive-complexity-morphisms:s5",
+      "macros": {
+        "\\N": "\\mathbb N",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\sumword": "\\sigma(#1)"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sahas2015-even-additive-complexity-morphisms",
+      "scope": "in_scope",
+      "statement": "Let $t\\geq1$, let $\\Gamma$ be a finite alphabet and let\n$\\mu:\\Gamma^*\\to\\Z^t$ preserve concatenation as vector addition.\nFor an infinite word $y$, define\n$\\rho_y^\\mu(n)=|\\{\\mu(F): F\\text{ is a length-}n\\text{ factor of }y\\}|$.\nIf $y$ is an infinite finite-morphic image of a universal word and\n$\\rho_y^\\mu$ is bounded, then $\\rho_y^\\mu(n)$ is odd at all sufficiently\nlarge multiples of the codeword-length gcd. In particular, an eventually\nconstant positive abelian complexity of such an image is odd.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+      "toolchain": null,
+      "version": 2,
+      "work": "sahas2015-even-additive-complexity-morphisms"
+    },
+    {
+      "attribution": null,
+      "authors": [
+        {
+          "affiliation": "ChronoAI Pte Ltd, Singapore",
+          "name": "Haobo Ma"
+        },
+        {
+          "affiliation": "National University of Singapore; ChronoAI Pte Ltd, Singapore",
+          "name": "Wenlin Zhang"
+        }
+      ],
+      "claim": "s6",
+      "contributor": null,
+      "identity": "collected:sahas2015-even-additive-complexity-morphisms:2:s6",
+      "kind": "paper",
+      "label": "Corollary",
+      "lean_source": {
+        "revision": "ea30c256f9857dcf2582db122a9570836d8a5f18",
+        "url": "https://github.com/the-omega-institute/trureturing/blob/ea30c256f9857dcf2582db122a9570836d8a5f18/D5/S1/Words/Complexity/SahasrabudheEvenAdditiveComplexityMorphism.lean"
+      },
+      "lineage": "collected:sahas2015-even-additive-complexity-morphisms:s6",
+      "macros": {
+        "\\N": "\\mathbb N",
+        "\\Q": "\\mathbb Q",
+        "\\Z": "\\mathbb Z",
+        "\\sumword": "\\sigma(#1)"
+      },
+      "next_step": "Formalization work is coordinated through the shared requests.",
+      "proof_basis": null,
+      "proof_state": "preparing",
+      "receipt": null,
+      "record": "sahas2015-even-additive-complexity-morphisms",
+      "scope": "in_scope",
+      "statement": "If $w$ is universal and $y=\\varphi(w)$ is infinite and uniformly\nrecurrent, then $y$ is periodic. If its additive complexity is also\nconstant, then $y$ is constant and that complexity is one.",
+      "status": "preparing",
+      "target_digest": null,
+      "title": "Parity in Sahasrabudhe's additive-complexity question: extending Banero's morphism criterion",
+      "toolchain": null,
+      "version": 2,
+      "work": "sahas2015-even-additive-complexity-morphisms"
+    }
+  ]
+}
